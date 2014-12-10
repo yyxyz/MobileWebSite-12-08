@@ -282,10 +282,11 @@ namespace MobileWebSite.BLL.OrderOperation.BLL
         //option 0 代表未完成的物流 1代表已完成的物流
         public int GetTransporationNum(int EnterpriseId, int category, int option)
         {
-            int received = 0;
-            int notreceived = 0;
+            
             if (category == 0)
             {
+                int received = 0;
+                int notreceived = 0;
                 try
                 {
                     var tempOrderList = orderRep.LoadEntities(Order => Order.ProviderEnterprise_ID
@@ -323,6 +324,8 @@ namespace MobileWebSite.BLL.OrderOperation.BLL
             }
             else if (category == 1)
             {
+                int received = 0;
+                int notreceived = 0;
                 try
                 {
                     var tempOrderList = orderRep.LoadEntities(Order => Order.PublisherEnterprise_ID

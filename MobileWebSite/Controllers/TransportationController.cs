@@ -53,7 +53,7 @@ namespace MobileWebSite.Controllers
         /*获取订单详情, 根据订单号*/
         public JsonResult GetTransportDetails(int distributionId)
         {
-                distributionId = 1;  //设置一个默认的企业id，实际上线时需要做一个异常处理机制
+                //distributionId = 1;  //设置一个默认的企业id，实际上线时需要做一个异常处理机制
                 var tempTransportationDetail = transportOper.GetTransportDetailByDistributionId(distributionId);
                 return Json(tempTransportationDetail, JsonRequestBehavior.AllowGet);
         }

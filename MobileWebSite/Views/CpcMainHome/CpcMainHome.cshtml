@@ -11,17 +11,17 @@
 <html>
 <body>
     <style>
-        #Home-div {
+        #Home-div-CpcMainHome {
             background-color: #efeff4;
             height: 100%;
         }
 
-        #Name-table {
+        #Name-table-CpcMainHome {
             background-color: #efeff4;
             margin-left: 2%;
         }
 
-        .item {
+        .item-CpcMainHome {
             margin-top: 10px;
             margin-left: 2%;
             margin-top: 5px;
@@ -31,7 +31,7 @@
             border-radius: 10px;
         }
 
-        .item-inside {
+        .item-inside-CpcMainHome {
             border-bottom: 1px solid #e2dddd;
             margin-bottom: 0px;
             margin-top: 1px;
@@ -43,9 +43,9 @@
         }
     </style>
 
-    <div id="Home" data-role="view" data-title="我的首页">
-        <div id="Home-div">
-            <table border="0" id="Name-table">
+    <div id="Home" data-role="view" data-title="我的首页" data-reload="true">
+        <div id="Home-div-CpcMainHome">
+            <table border="0" id="Name-table-CpcMainHome">
                 <tr>
                     <td><img src="/../CpcMain/get_Enlogo" style="border-radius:10px" width="70" height="70" alt="" /></td>
                     <td>
@@ -55,11 +55,11 @@
                 </tr>
             </table>
 
-            <div class="item">
-                <div class="item-inside">
+            <div class="item-CpcMainHome">
+                <div class="item-inside-CpcMainHome">
                     <h3 style="color:#e2dddd;padding-top:10px;line-height:1px">订单信息</h3>
                 </div>
-                <div class="item-inside">
+                <div class="item-inside-CpcMainHome">
                     <span style="font-size:medium;">
                         您发出的订单有 @ViewBag.sendordernum 条还未完成
                         <a id="sendorder" data-role="button" href="/../OrderDemo/Index?category=0" style="font-size:8px;clear:right;float:right;margin-right:10px">点击查看</a>
@@ -71,11 +71,11 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="item-inside">
+            <div class="item-CpcMainHome">
+                <div class="item-inside-CpcMainHome">
                     <h3 style="color:#e2dddd;padding-top:10px;line-height:1px">物流信息</h3>
                 </div>
-                <div class="item-inside">
+                <div class="item-inside-CpcMainHome">
                     <span style="font-size:medium;">
                         您发出的货物有 @ViewBag.sendtransporationnum 条还未被确认收货
                         <a id="sendtranslation" href="/../Transportation/Index?category=1" data-role="button" style="font-size:8px;clear:right;float:right;margin-right:10px">点击查看</a>

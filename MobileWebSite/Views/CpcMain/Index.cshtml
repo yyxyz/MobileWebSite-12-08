@@ -19,9 +19,12 @@
     <link href="~/Kendo/styles/kendo.dataviz.min.css" rel="stylesheet" />
     <link href="~/Kendo/styles/kendo.dataviz.default.min.css" rel="stylesheet" />
     <link href="~/Kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/website-searchbox.css" rel="stylesheet" />
+    <link href="~/Content/themes/div-item.css" rel="stylesheet" />
 
     @* <script src="~/Scripts/js/kendo.all.min.js"></script>*@
     <script src="~/Scripts/js/jquery.min.js"></script>
+    @*<script src="~/Scripts/jquery-1.7.1.min.js"></script>*@
     <script src="~/Scripts/js/kendo.all.min.js"></script>
     <script src="~/Scripts/angular.min.js"></script>
 
@@ -50,12 +53,12 @@
     </script>
 </head>
 <body>
-    <div data-role="view" id="drawer-myIframe" data-title="@ViewBag.Name">
+    <div data-role="view" id="drawer-myIframe" data-title="@ViewBag.Name" >
         @* <div id="temp"></div>
             <iframe id="myIframe" src=" " height ="100%" width="100%" frameborder=”no” border=”0″ marginwidth=”0″ marginheight=”0″></iframe>*@
     </div>
 
-    <div data-role="drawer" id="my-drawer" style="width: 230px;  data-views=" ['drawer-myiframe', 'drawer-sendorder' , 'drawer-sendordercomplete' ,'drawer-sendordernotcomplete','drawer-receiveorder', 'drawer-receiveordercomplete' ,'drawer-receiveordernotcomplete','drawer-sendtranslation','drawer-sendtranslationcompelete','drawer-sendtranslationnotcomplete','drawer-receivetranslation','drawer-receivetranslationcompelete','drawer-receivetranslationnotcomplete']">
+    <div data-role="drawer" id="my-drawer" style="width: 230px;  data-views =" ['drawer-myiframe', 'drawer-sendorder' , 'drawer-sendordercomplete' ,'drawer-sendordernotcomplete','drawer-receiveorder', 'drawer-receiveordercomplete' ,'drawer-receiveordernotcomplete','drawer-sendtranslation','drawer-sendtranslationcompelete','drawer-sendtranslationnotcomplete','drawer-receivetranslation','drawer-receivetranslationcompelete','drawer-receivetranslationnotcomplete']">
         <ul data-role="listview" data-type="group" style="">
             <li>
                 <ul>
@@ -82,8 +85,8 @@
                 物流管理
                 <ul>
                     <li data-icon="sent"><a href="/../Transportation/AddTransportList" data-transition="none">我要发货</a></li>
-                    <li data-icon="sent"><a href="/../Transportation/Index?category=1" data-transition="none">发货信息查看</a></li>
-                    <li data-icon="trash"><a href="/../Transportation/Index?category=0" data-transition="none">收货信息查看</a></li>
+                    <li data-icon="sent"><a id="sentTransp" href="/../Transportation/Index?category=1" data-transition="none">发货信息查看</a></li>
+                    <li data-icon="trash"><a id ="receiveTransp" href="/../Transportation/Index?category=0" data-transition="none">收货信息查看</a></li>
                 </ul>
             </li>
         </ul>
